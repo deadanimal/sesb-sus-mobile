@@ -1,0 +1,33 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/services"
+				routerLink="/services"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>Move In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="list-core">
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Account No.</ion-label>
+      <ion-input placeholder="Account no." mode="ios"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+	<ion-button 
+		class="round" 
+		shape="round" 
+    expand="block"
+    mode="ios"
+  >
+		Add Account
+	</ion-button>
+</ion-footer>

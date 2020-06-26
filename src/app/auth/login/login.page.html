@@ -1,0 +1,55 @@
+<ion-content fullscreen>
+	<div class="wave-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5e72e4" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,186.7C672,149,768,107,864,80C960,53,1056,43,1152,64C1248,85,1344,139,1392,165.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+	</div>
+	<ion-grid class="ion-padding-start ion-padding-end ion-padding-top login-container">
+		<ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%; flex-direction: column">
+			<img src="assets/img/logo/sesb-logo.png">
+			<h2 class="ion-text-center">Login</h2>
+			<form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
+				<ion-item lines="none">
+					<ion-label position="stacked">Your email</ion-label>
+					<ion-input type="text" formControlName="username" placeholder="Your Email"></ion-input>
+				</ion-item>
+
+				<div class="validation-errors">
+					<ng-container *ngFor="let message of loginFormMessages.username">
+						<div 
+							class="error-message"
+							*ngIf="loginForm.get('username').hasError(message.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)"
+						>
+							{{ message.message }}
+						</div>
+					</ng-container>
+				</div>
+
+				<ion-item lines="none">
+					<ion-label position="stacked">Password</ion-label>
+					<ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+				</ion-item>
+
+				<div class="validation-errors ion-text-right">
+					<p><a (click)="navigateForgotPage()">Forgot Password </a></p>
+				</div>
+
+				<div class="ion-text-center ion-padding-start ion-padding-end">
+					<ion-button 
+						*ngIf="!isLoading"
+						type="submit"
+						[disabled]="!loginForm.valid"
+						shape="round"
+						expand="block"
+						color="primary"
+						mode="ios"
+					>
+						Login
+					</ion-button>
+					<ion-button disabled mode="ios" *ngIf="isLoading" type="submit" shape="round" color="primary">
+						<ion-spinner name="bubbles"></ion-spinner>
+					</ion-button>
+					<p>No account yet? <a (click)="navigateRegisterPage()">Create an account.</a> </p>
+				</div>
+			</form>
+		</ion-row>
+	</ion-grid>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header mode="ios" class="ion-no-border">
+	<ion-toolbar mode="ios" class="ion-text-center" color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/core/bills"
+				routerLink="/core/bills"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>Bill Payment Detail</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+  <div class="ion-text-center header-container">
+    <ion-badge>Account: <span class="ion-text-bold">X123456789</span></ion-badge>
+  </div>
+
+  <ion-list class="list-core">
+    <ion-item lines="none">
+      <ion-label>
+        <p>Bill Issue Date</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>01/01/2020</h2>
+      </ion-label>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-label>
+        <p>Reference No.</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>8127471241211</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Payment Date</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>11/04/2020</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Payment Amount</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>RM186.78</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

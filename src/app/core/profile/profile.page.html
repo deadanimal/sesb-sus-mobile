@@ -1,0 +1,50 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core" fullscreen>
+  <ion-list class="list-core">
+    <ion-list-header>
+      <ion-label>
+        <h2>Account</h2>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none" detail (click)="navigatePage('/profile-information')">
+      <ion-icon name="person-circle-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>Personal</ion-label>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>
+        <h2>Support</h2>
+      </ion-label>
+    </ion-list-header>
+    
+    <ion-item lines="none" detail (click)="navigatePage('/profile-help')">
+      <ion-icon name="help-buoy-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>Help</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" detail (click)="navigatePage('/profile-share')">
+      <ion-icon name="share-social-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>Share</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" detail (click)="navigatePage('/profile-about')">
+      <ion-icon name="information-circle-outline" slot="start" color="primary"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer translucent="true" mode="ios" class="ion-padding ion-no-border footer-core">
+  <ion-button 
+    shape="round" 
+    expand="block"
+    (click)="logout()"> 
+    Logout 
+  </ion-button>
+</ion-footer>

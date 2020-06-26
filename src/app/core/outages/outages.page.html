@@ -1,0 +1,68 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-title>Outages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core" fullscreen>
+  <div 
+    style="height: 300px;"
+    leaflet 
+    [leafletOptions]="leafletConfig"
+    (leafletMapReady)="onMapReady($event)"
+  >
+  </div>
+
+  <ion-list class="list-core">
+    <ion-list-header>
+      <ion-label>
+        <h2 class="ion-text-bold">Current</h2>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <ion-avatar>
+        <fa-icon [icon]="faPlug" size="2x" [styles]="faIconStyle"></fa-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>Tawau</h2>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-wrap ion-text-right">
+        <p>Today</p>
+        <p>10.00 AM</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>
+        <h2 class="ion-text-bold">On Schedule</h2>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <ion-avatar>
+        <fa-icon [icon]="faPlug" size="2x" [styles]="faIconStyle"></fa-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>Kunak</h2>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-wrap ion-text-right">
+        <p>25 May 2020</p>
+        <p>10.00 AM</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-avatar>
+        <fa-icon [icon]="faPlug" size="2x" [styles]="faIconStyle"></fa-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>Kota Kinabalu</h2>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-wrap ion-text-right">
+        <p>29 May 2020</p>
+        <p>10.00 AM</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

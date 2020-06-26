@@ -1,0 +1,45 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar mode="ios" class="ion-no-border">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-img src="assets/svg/analytics.svg"></ion-img>
+      <h1 class="ion-text-center">Track & Monitor</h1>
+      <p class="ion-text-center">Track & monitor your work activity assigned to increase productivity & efficiency</p>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/svg/efficient.svg"></ion-img>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+
+  <form class="form">
+    <h3 class="ion-margin-start">Sign in</h3>
+    <ion-item lines="none">
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <ion-button 
+      shape="round"
+      expand="block"
+      color="primary"
+      mode="ios"
+      class="ion-margin-start ion-margin-end ion-margin-top"
+    >
+      Sign in
+    </ion-button>
+  </form>
+</ion-content>

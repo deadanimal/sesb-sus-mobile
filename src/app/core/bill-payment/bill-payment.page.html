@@ -1,0 +1,52 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/core/bills" routerLink="/core/bills" routerDirection="back">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Pay Bill</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core" fullscreen>
+  <div class="ion-text-center header-container">
+    <ion-badge>Account: <span class="ion-text-bold">X123456789</span></ion-badge>
+  </div>
+
+  <ion-list class="list-core">
+    <ion-item lines="none">
+      <ion-label>
+        <p>Current Bill</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>RM185.00</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Last Payment</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>RM186.77</h2>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <p>Total Bill</p>
+      </ion-label>
+      <ion-label class="ion-text-right">
+        <h2>RM185.00</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-item lines="none" class="item-form">
+    <ion-label position="stacked" mode="ios">Enter Bill Amount (RM)</ion-label>
+    <ion-input placeholder="165.00" type="number"></ion-input>
+  </ion-item>
+  <ion-button expand="block" mode="ios" class="btn-core" (click)="makePayment()">Pay</ion-button>
+</ion-footer>

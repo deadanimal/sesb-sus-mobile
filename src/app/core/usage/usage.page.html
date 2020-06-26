@@ -1,0 +1,42 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/core/dashboard"
+				routerLink="/core/dashboard"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>Usage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+
+  <ion-list class="list-core">
+    <ion-list-header>
+      <ion-label>
+        <h2 class="ion-text-bold">Appliances Usage</h2>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <div class="chart-container">
+        <canvas #doughnutCanvas></canvas>
+      </div>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>
+        <h2 class="ion-text-bold">Usage by Month</h2>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <div class="chart-container">
+        <canvas #lineCanvas></canvas>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

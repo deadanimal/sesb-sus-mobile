@@ -1,0 +1,31 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/core/dashboard"
+				routerLink="/core/dashboard"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>Compare</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+  
+  <ion-list class="list-core">
+    <ion-list-header>
+      <ion-label>
+        <h2 class="ion-text-bold">Average Usage Comparison</h2>
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none">
+      <div class="chart-container">
+        <canvas #barCanvas></canvas>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

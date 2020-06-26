@@ -1,0 +1,40 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/core/dashboard"
+				routerLink="/core/dashboard"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+  <ion-list class="list-core">
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Bill Category</ion-label>
+      <ion-select disabled selectedText="Domestic Tariff (DM)" mode="ios">
+        <ion-select-option selected>Domestic Tariff (DM)</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Total Consumption (kWh)</ion-label>
+      <ion-input placeholder="0" [(ngModel)]="consumption" (ionChange)="calculate()" mode="ios"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+	<ion-item lines="none">
+    <ion-label slot="start">
+      <p>Total Bill</p>
+    </ion-label>
+    <ion-label class="ion-text-right">
+      <h2 class="ion-text-no-margin ion-text-bold ion-text-wrap">RM{{totalCalculated}}</h2>
+    </ion-label>
+  </ion-item>
+</ion-footer>

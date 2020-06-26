@@ -1,0 +1,74 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios" class="ion-text-center" color="primary">
+	  <ion-buttons slot="start">
+			  <ion-back-button 
+				  defaultHref="/core/profile"
+				  routerLink="/core/profile"
+				  routerDirection="back"
+			  >
+			  </ion-back-button>
+	  </ion-buttons>
+	  <ion-title>
+		<span *ngIf="formType != 'password'">Edit Information</span>
+		<span *ngIf="formType == 'password'">Reset Password</span>
+	</ion-title>
+	</ion-toolbar>
+  </ion-header>
+
+<ion-content class="content-core" fullscreen>
+	<ion-list class='list-core'>
+		<ion-item *ngIf="formType == 'name'" class="item-form" lines="none">
+			<ion-label position="stacked" mode="ios">Name</ion-label>
+			<ion-input placeholder="User's name" mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'nric'" class="item-form" lines="none">
+			<ion-label position="stacked" mode="ios">NRIC</ion-label>
+			<ion-input placeholder="User's NRIC" mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'email'" class="item-form" lines="none">
+			<ion-label position="stacked" mode="ios">Email</ion-label>
+			<ion-input placeholder="User's email" mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'mobile'" class="item-form" lines="none">
+			<ion-label position="stacked" mode="ios">Mobile No.</ion-label>
+			<ion-input placeholder="User's mobile no." mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'address'" class="item-form" lines="none">
+			<ion-label position="stacked" mode="ios">Address</ion-label>
+			<ion-textarea placeholder="User's address" mode="ios"></ion-textarea>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'password'" class="item-form" lines="none">
+			<ion-label position="stacked" mode="ios" class="ion-text-wrap">
+				<p>
+					Please click the button below to reset your password
+				</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+	<ion-button 
+		class="round" 
+		shape="round" 
+		expand="block" 
+		mode="ios"
+		*ngIf="formType != 'password'"
+		(click)="save()"> 
+		Save
+	</ion-button>
+	<ion-button 
+		class="round" 
+		shape="round" 
+		expand="block" 
+		mode="ios"
+		*ngIf="formType == 'password'"
+		(click)="resetPassword()"> 
+		Reset
+	</ion-button>
+</ion-footer>

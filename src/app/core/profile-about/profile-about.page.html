@@ -1,0 +1,38 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/core/profile"
+				routerLink="/core/profile"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+  <ion-list class='list-core'>
+    <ion-list-header lines="none">
+			<ion-label>
+        <h2>About application</h2>
+      </ion-label>
+		</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon name="information-circle-outline" slot="start" color="primary"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        <h4>Application version</h4>
+        <p>0.1.0-beta</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="information-circle-outline" slot="start" color="primary"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        <h4>Legal information</h4>
+        <p>Copyright 2020 SUS Prototype. All rights reserved</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

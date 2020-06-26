@@ -1,0 +1,67 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button 
+				defaultHref="/services"
+				routerLink="/services"
+				routerDirection="back"
+			>
+			</ion-back-button>
+    </ion-buttons>
+    <ion-title>Service Connection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-core">
+  <ion-list class="list-core">
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Property Address</ion-label>
+      <ion-textarea placeholder="Property address" mode="ios"></ion-textarea>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Postcode</ion-label>
+      <ion-input placeholder="Postcode" mode="ios"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">District</ion-label>
+      <ion-input placeholder="District" mode="ios"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">State</ion-label>
+      <ion-input placeholder="State" mode="ios"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Owner Name</ion-label>
+      <ion-input placeholder="Owner name" mode="ios"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Owner Phone No.</ion-label>
+      <ion-input placeholder="Owner phone no." mode="ios"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Owner Email</ion-label>
+      <ion-input placeholder="Owner email" mode="ios"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="item-form">
+      <ion-label position="stacked" mode="ios">Supporting Document</ion-label>
+      <ion-input placeholder="Supporting document" type="file" mode="ios"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+	<ion-button 
+		shape="round" 
+    expand="block"
+    mode="ios"
+  >
+		Submit
+	</ion-button>
+</ion-footer>
